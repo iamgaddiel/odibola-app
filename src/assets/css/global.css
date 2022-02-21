@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "Avenir Next Bold";
+  src: url('../fonts/AvenirNextLTPro-Bold.otf');
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url('../fonts/AvenirNextLTPro-Cn.otf');
+}
+
+* {
+  --blue-color: #0f1f93;
+  --gray-color:  #A4A7B6;
+  --input-background: #E4E4E4;
+  --button-color: #0D1B81;
+}
+
+/* Colors */
+.blue-text {
+  color: var(--blue-color);
+}
+.gray-text{
+    color: var(--gray-color)
+}
+
+/* background colors */
+.blue-bg {
+  background-color: var(--blue-color) !important;
+}
+.gray-bg{
+    background-color: var(--gray-color) !important;
+}
+.input-bg{
+  background-color: var(--input-background);
+}
+.button-bg{
+  background: var(--button-color);
+}
+
+
+/* Text */
+.bold{
+  font-family: 'Avenir Next Bold';
+}
