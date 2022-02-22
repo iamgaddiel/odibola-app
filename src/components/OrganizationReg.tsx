@@ -1,5 +1,6 @@
 import { IonButton, IonInput, IonItem, IonLabel, IonList, IonRouterLink, IonSelect, IonSelectOption } from '@ionic/react'
 import React, { useState } from 'react'
+import { useHistory } from 'react-router';
 import PhoneInput from 'react-phone-number-input'
 import { useForm } from 'react-hook-form'
 
@@ -15,6 +16,8 @@ const OrganizationReg: React.FC = () => {
   // business type
   let [bizType, setBizType] = useState<string>("")
 
+  const history = useHistory()
+
   const handleSetPhoneNumber = (phoneNumber: any) => setPhoneNumber(phoneNumber);
 
   // react-hock-form
@@ -22,7 +25,10 @@ const OrganizationReg: React.FC = () => {
   const { register, handleSubmit } = useForm()
 
   // todo: send form data to firebase 
-  const handleFormSubmit = (data: any) => console.log(data)
+  const handleFormSubmit = (data: any) => {
+    console.log(data);
+    history.push('/verify-phone');
+  }
 
   return (
     <>
@@ -120,11 +126,13 @@ const OrganizationReg: React.FC = () => {
           </section>
 
           <IonButton
-            type='submit'
+            // type='submit'
             fill='clear'
             expand='block'
             shape='round'
             size='default'
+            routerDirection='forward'
+            routerLink='/verify-phone'
             className='blue-bg text-light mt-3 ion-margin-top'>
             Continue
           </IonButton>

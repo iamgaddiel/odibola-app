@@ -140,7 +140,7 @@ const OnboardingSlides: React.FC = () => {
                             <div className="onboarding-action">
                                 {/* next button */}
                                 <IonButton
-                                    href='/registration'
+                                    routerLink='/registration'
                                     routerDirection='forward'
                                     fill='clear'
                                     color='light'

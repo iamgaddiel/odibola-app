@@ -1,0 +1,10 @@
+.img-container{
+    width: 56px;
+    height: 56px;
+}
+
+.scan-img-wrapper{
+    width: 75%;
+    height: 40%;
+    margin: 0 auto;
+}

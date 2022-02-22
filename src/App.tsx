@@ -29,6 +29,11 @@ import Registration from './pages/Registration';
 
 // Bootstrap 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import VerifyPhone from './pages/VerifyPhone';
+import IndividualVerification from './pages/IndividualVerification';
+import OrganizationVerification from './pages/OrganizationVerification';
+import ChangePhoneNumber from './pages/ChangePhoneNumber';
+import ScanNationalId from './pages/ScanNationalIDFront';
 
 
 setupIonicReact();
@@ -45,6 +50,24 @@ const App: React.FC = () => (
         </Route>
         <Route exact path="/registration">
           <Registration />
+        </Route>
+        <Route exact path="/verify-phone">
+          <VerifyPhone />
+        </Route>
+        <Route exact path="/individual-verification">
+          <IndividualVerification />
+        </Route>
+        <Route exact path="/organization-verification">
+          <OrganizationVerification />
+        </Route>
+        <Route exact path="/change-number">
+          <ChangePhoneNumber />
+        </Route>
+        <Route exact path="/scan-front-national-id">
+          <ScanNationalId />
+        </Route>
+        <Route exact path="/scan-back-national-id">
+          <ScanNationalId />
         </Route>
       </IonRouterOutlet>
     </IonReactRouter>
