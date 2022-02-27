@@ -1,43 +1,122 @@
 @font-face {
   font-family: "Avenir Next Bold";
-  src: url('../fonts/AvenirNextLTPro-Bold.otf');
+  src: url("../fonts/AvenirNextLTPro-Bold.otf");
 }
 @font-face {
   font-family: "Avenir Next";
-  src: url('../fonts/AvenirNextLTPro-Cn.otf');
+  src: url("../fonts/AvenirNextLTPro-Cn.otf");
 }
 
 * {
   --blue-color: #0f1f93;
-  --gray-color:  #A4A7B6;
-  --input-background: #E4E4E4;
-  --button-color: #0D1B81;
+  --gray-color: #a4a7b6;
+  --input-background: #e4e4e4;
+  --button-color: #0d1b81;
+  --lead: #808399;
+  --heading: #434553;
+  --white: #ffffff;
+  --off-white: #E5E5E5;
+  --light-gray: #c9cad3;
+  --light-blue: #EFF1FF;
+  --warning: #FFF7E4;
+  --waning-bold: #FFBF29;
+  --primary-notice: #EBEDFF;
+
+/* ionic theme */
+  --ion-background-color: #F8F8F8;
+  --ion-toolbar-background: #F8F8F8;
 }
 
 /* Colors */
 .blue-text {
   color: var(--blue-color);
 }
-.gray-text{
-    color: var(--gray-color)
+.gray-text {
+  color: var(--gray-color);
+}
+.heading-text {
+  color: var(--heading);
+}
+.lead-text {
+  color: var(--lead);
 }
 
 /* background colors */
 .blue-bg {
   background-color: var(--blue-color) !important;
 }
-.gray-bg{
-    background-color: var(--gray-color) !important;
+.gray-bg {
+  background-color: var(--gray-color) !important;
 }
-.input-bg{
+.input-bg {
   background-color: var(--input-background);
 }
-.button-bg{
+.button-bg {
   background: var(--button-color);
 }
-
+.light-gray-bg {
+  background-color: var(--light-gray);
+}
+.light-blue-bg{
+  background-color: var(--light-blue);
+}
+.light-bg{
+  background-color: var(--white) !important;
+}
+.off-white-bg{
+  background-color: var(--off-white) !important;
+}
+.warning-bg{
+  background-color: var(--warning) !important;
+}
+.primary-notice-bg{
+  background-color: var(--primary-notice) !important;
+}
 
 /* Text */
-.bold{
-  font-family: 'Avenir Next Bold';
+.bold {
+  font-family: "Avenir Next Bold";
 }
+
+/* buttons */
+.blue-btn {
+  background: var(--button-color);
+  border: none;
+  border-radius: 5px;
+  color: var(--white) !important;
+  padding: 15px auto !important;
+}
+.blue-btn-outline {
+  background: transparent;
+  border: 1px solid var(--button-color);
+  border-radius: 5px;
+  color: var(--blue-color) !important;
+  padding: 15px auto !important;
+}
+
+
+/* flex */
+.flx-center-xy{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flx-center-y{
+  display: flex;
+  align-items: center;
+}
+
+.flx-center-x{
+  display: flex;
+  justify-content: center;
+}
+
+
+/* rounded borders */
+.rounded-edges{
+  border-radius: 25px !important;
+  overflow: hidden;
+}
+
+/* upload decoy */

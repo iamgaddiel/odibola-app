@@ -29,7 +29,7 @@ const ScanNationalIDFront = () => {
                             <IonImg src={FrontID} />
                         </div>
                     </section>
-                    <section>
+                    <section className='ion-padding'>
                         {/* take photo button */}
                         <IonButton
                             className='blue-bg'
@@ -48,6 +48,8 @@ const ScanNationalIDFront = () => {
                             fill="clear"
                             expand='block'
                             color='light'
+                            routerDirection='forward'
+                            routerLink='/scan-back-national-id'
                         >
                             Continue
                         </IonButton>

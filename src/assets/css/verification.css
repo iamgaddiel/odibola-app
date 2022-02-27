@@ -1,6 +1,15 @@
 .img-container{
-    width: 56px;
-    height: 56px;
+    width: 50px;
+    height:50px;
+    /* background-color: #EBEDFF; */
+    /* background-color: #EBEDFF; */
+    /* border-radius: 50%;
+    overflow: hidden; */
+}
+
+.img-container image{
+    width: 100%;
+    height: auto;
 }
 
 .scan-img-wrapper{
@@ -8,3 +17,4 @@
     height: 40%;
     margin: 0 auto;
 }
+

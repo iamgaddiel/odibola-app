@@ -52,7 +52,7 @@ const OnboardingSlides: React.FC = () => {
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, sit molestiae harum eum tenetur debitis.</p>
                             </div>
                             <div className="onboarding-pagination"></div>
-                            <div className="onboarding-actions">
+                            <div className="onboarding-actions flx-center-y">
                                 {/* skip button */}
                                 <IonRouterLink
                                     routerDirection='forward'
@@ -66,11 +66,11 @@ const OnboardingSlides: React.FC = () => {
                                 <IonButton
                                     fill='clear'
                                     size='large'
+                                    className='blue-text'
                                     onClick={handleNextPage}
                                 >
                                     <IonIcon
                                         icon={arrowForwardCircle}
-                                        className='blue-bg ion-padding'
                                         size='large'
                                     />
                                 </IonButton>
@@ -95,7 +95,7 @@ const OnboardingSlides: React.FC = () => {
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, sit molestiae harum eum tenetur debitis.</p>
                             </div>
                             <div className="onboarding-pagination"></div>
-                            <div className="onboarding-actions">
+                            <div className="onboarding-actions flx-center-y">
                                 {/* skip button */}
                                 <IonRouterLink
                                     routerDirection='forward'
@@ -109,11 +109,11 @@ const OnboardingSlides: React.FC = () => {
                                 <IonButton
                                     fill='clear'
                                     size='large'
+                                    className='blue-text'
                                     onClick={handleNextPage}
                                 >
                                     <IonIcon
                                         icon={arrowForwardCircle}
-                                        className='blue-bg ion-padding'
                                         size='large'
                                     />
                                 </IonButton>

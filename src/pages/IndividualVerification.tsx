@@ -8,9 +8,6 @@ import {
   IonIcon,
   IonInput,
   IonPage,
-  IonRouterLink,
-  IonSelect,
-  IonSelectOption,
   IonTitle,
   IonToolbar,
   IonBadge,
@@ -62,7 +59,7 @@ const IndividualVerification: React.FC = () => {
               {/* national Id */}
               <IonCard
                 routerDirection='forward'
-                routerLink='/scan-national-id'
+                routerLink='/scan-front-national-id'
                 className='ion-padding d-flex align-items-center'>
                 <div className='d-flex align-items-center'>
                   <div className="img-container">
