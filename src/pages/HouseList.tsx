@@ -1,8 +1,7 @@
-import { IonPage, IonHeader, IonToolbar, IonButtons, IonBackButton, IonContent, IonButton, IonIcon, IonCard, IonCardContent, IonSlides, IonSlide, IonImg, IonFab, IonFabButton } from '@ionic/react'
-import { filterOutline, funnelOutline, carOutline, heartOutline } from 'ionicons/icons'
+import { IonPage, IonContent, IonButton, IonIcon, IonCard, IonCardContent, IonSlides, IonSlide, IonImg, IonFab, IonFabButton, IonRouterLink, IonHeader, IonText, IonToolbar } from '@ionic/react'
+import { filterOutline, funnelOutline, carOutline, heartOutline, chevronBackOutline } from 'ionicons/icons'
 import React from 'react'
 import Home1 from '../assets/svgs/home-1.svg'
-import Home2 from '../assets/svgs/home-2.svg'
 import Header from '../components/Header'
 
 
@@ -18,6 +17,7 @@ const HouseList: React.FC = () => {
     return (
         <IonPage>
             <Header routerLink='/dashboard' />
+            
 
 
             <IonContent>

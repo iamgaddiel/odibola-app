@@ -1,4 +1,4 @@
-import { IonPage, IonHeader, IonToolbar, IonButtons, IonBackButton, IonContent, IonButton, IonIcon, IonCard, IonCardContent, IonImg, IonRouterLink, IonSlide, IonSlides, IonFab, IonFabButton } from '@ionic/react'
+import { IonPage, IonHeader, IonToolbar, IonButtons, IonBackButton, IonContent, IonButton, IonIcon, IonCard, IonCardContent, IonImg, IonSlide, IonSlides, IonFab, IonFabButton } from '@ionic/react'
 import { carOutline, filterOutline, funnelOutline, heartOutline } from 'ionicons/icons'
 import React from 'react'
 
@@ -121,6 +121,8 @@ const LandList: React.FC = () => {
                                         fill='clear'
                                         expand='block'
                                         className=' w-50 blue-btn'
+                                        routerLink='/land-purchase'
+                                        routerDirection='forward'
                                     // color='light'
                                     >
                                         Purchase
@@ -128,6 +130,7 @@ const LandList: React.FC = () => {
                                 </section>
                             </IonCardContent>
                         </IonCard>
+                        
                     </section>
                 </main>
             </IonContent>

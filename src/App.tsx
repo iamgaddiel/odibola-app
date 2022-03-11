@@ -1,5 +1,5 @@
 import { Redirect, Route } from 'react-router-dom';
-import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
+import { IonApp, IonIcon, IonLabel, IonPage, IonRouterOutlet, IonTabBar, IonTabButton, IonTabs, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import Home from './pages/Home';
 
@@ -24,7 +24,6 @@ import './theme/variables.css';
 
 // Global CSS
 import './assets/css/global.css';
-import AuthPage from './pages/AuthPage';
 import Registration from './pages/Registration';
 
 // Bootstrap 
@@ -38,109 +37,117 @@ import ChangePhoneNumber from './pages/ChangePhoneNumber';
 import ScanNationalIDFront from './pages/ScanNationalIDFront';
 import ScanNationalIDBack from './pages/ScanNationalIDBack';
 import AccountVerified from './pages/AccountVerified';
-import Dashboard from './pages/Dashboard';
-import LandList from './pages/LandList';
-import HouseList from './pages/HouseList';
-import PropertyDetail from './pages/PropertyDetail';
-import HomeScheduleVisit from './pages/HomeScheduleVisit';
-import LandDetail from './pages/LandDetail';
-import LandVisitDecision from './pages/LandVisitDecision';
-import LandSchedule from './pages/LandSchedule';
-import LandEnquiryForm from './pages/LandEnquiryForm';
+import ContractOfSale from './pages/ContractOfSale';
+import Routes from './components/Routes';
 import HomePaymentOption from './pages/HomePaymentOption';
 import HomePayWithBackTransfer from './pages/HomePayWithBackTransfer';
 import HomeProofOfPayment from './pages/HomeProofOfPayment';
-import ContractOfSale from './pages/ContractOfSale';
+import HomeScheduleVisit from './pages/HomeScheduleVisit';
+import HouseList from './pages/HouseList';
+import LandAcceptedOffer from './pages/LandAcceptedOffer';
+import LandDetail from './pages/LandDetail';
+import LandEnquiryForm from './pages/LandEnquiryForm';
+import LandList from './pages/LandList';
+import LandOffer from './pages/LandOffer';
+import LandPurchase from './pages/LandPurchase';
+import LandSchedule from './pages/LandSchedule';
+import LandVisitDecision from './pages/LandVisitDecision';
+import PropertyDetail from './pages/PropertyDetail';
+import Search from './pages/Search';
+import SearchResult from './pages/SearchResult';
+import Onboarding from './pages/Onboarding';
+import Favorite from './pages/Favorites';
+import Updates from './pages/Updates';
+
+// ionic icons
+import { homeOutline, search, heart, barbellOutline, notificationsOutline } from 'ionicons/icons';
 
 
 setupIonicReact();
 
+// todo: finish search result screen
+// todo: finish
+
 const App: React.FC = () => (
   <IonApp>
+
     <IonReactRouter>
-      <IonRouterOutlet>
-        <Route exact path="/home">
-          <Home />
-        </Route>
-        <Route exact path="/">
-          <Redirect to="/home" />
-        </Route>
-        <Route exact path="/registration">
-          <Registration />
-        </Route>
+      <IonPage>
+        <IonTabs>
+          
+          <IonRouterOutlet>
+            <Route exact path="/onboarding" component={Onboarding} />
+            <Route exact path='/search-result' component={SearchResult} />
 
-        {/* verification pages */}
-        <Route exact path="/verify-phone">
-          <VerifyPhone />
-        </Route>
-        <Route exact path="/individual-verification">
-          <IndividualVerification />
-        </Route>
-        <Route exact path="/organization-verification">
-          <OrganizationVerification />
-        </Route>
-        <Route exact path="/change-number">
-          <ChangePhoneNumber />
-        </Route>
-        <Route exact path="/scan-front-national-id">
-          <ScanNationalIDFront />
-        </Route>
-        <Route exact path="/scan-back-national-id">
-          <ScanNationalIDBack />
-        </Route>
-        <Route exact path="/verification-success">
-          <AccountVerified />
-        </Route>
-        <Route exact path="/contract-of-sale">
-          <ContractOfSale />
-        </Route>
+            {/* tabs */}
+            <Redirect exact from='/' to='/home' />
+            <Route exact path='/home' component={Home} />
+            <Route exact path='/updates' component={Updates} />
+            <Route exact path='/search' component={Search} />
+            <Route exact path="/favorites" component={Favorite} />
 
-        {/* main app */}
-        <Route exact path="/dashboard">
-          <Dashboard />
-        </Route>
 
-        {/* homes */}
-        <Route exact path="/homes">
-          <HouseList />
-        </Route>
-        <Route exact path="/property-detail">
-          <PropertyDetail />
-        </Route>
-        <Route exact path="/schedule-home">
-          <HomeScheduleVisit />
-        </Route>
-        <Route exact path="/home-payment-option">
-          <HomePaymentOption />
-        </Route>
-        <Route exact path="/home-bank-transfer">
-          <HomePayWithBackTransfer />
-        </Route>
-        <Route exact path="/home-proof-of-payment">
-          <HomeProofOfPayment />
-        </Route>
+            {/* verification pages */}
+            <Route exact path="/registration" component={Registration} />
+            <Route exact path="/verify-phone" component={VerifyPhone} />
+            <Route exact path="/individual-verification" component={IndividualVerification} />
+            <Route exact path="/organization-verification" component={OrganizationVerification} />
+            <Route exact path="/change-number" component={ChangePhoneNumber} />
+            <Route exact path="/scan-front-national-id" component={ScanNationalIDFront} />
+            <Route exact path="/scan-back-national-id" component={ScanNationalIDBack} />
+            <Route exact path="/verification-success" component={AccountVerified} />
+            <Route exact path="/contract-of-sale" component={ContractOfSale} />
 
-        {/* lands */}
-        <Route exact path="/lands">
-          <LandList />
-        </Route>
-        <Route exact path="/land-detail">
-          <LandDetail />
-        </Route>
-        <Route exact path="/land-schedule-verification">
-          <LandVisitDecision />
-        </Route>
-        <Route exact path="/schedule-land">
-          <LandSchedule />
-        </Route>
-        <Route exact path="/land-enquire">
-          <LandEnquiryForm />
-        </Route>
+            {/* homes */}
+            <Route exact path="/homes" component={HouseList} />
+            <Route exact path="/property-detail" component={PropertyDetail} />
+            <Route exact path="/schedule-home" component={HomeScheduleVisit} />
+            <Route exact path="/home-payment-option" component={HomePaymentOption} />
+            <Route exact path="/home-bank-transfer" component={HomePayWithBackTransfer} />
+            <Route exact path="/home-proof-of-payment" component={HomeProofOfPayment} />
 
-      </IonRouterOutlet>
+            {/* lands */}
+            <Route exact path="/lands" component={LandList} />
+            <Route exact path="/land-detail" component={LandDetail} />
+            <Route exact path="/land-schedule-verification" component={LandVisitDecision} />
+            <Route exact path="/schedule-land" component={LandSchedule} />
+            <Route exact path="/land-enquire" component={LandEnquiryForm} />
+            <Route exact path="/land-purchase" component={LandPurchase} />
+            <Route exact path="/land-offer" component={LandOffer} />
+            <Route exact path="/land-accepted-offer" component={LandAcceptedOffer} />
+
+          </IonRouterOutlet>
+
+          <IonTabBar
+            slot='bottom'
+            translucent
+            className='ion-padding-vertical blue-text'>
+              
+            <IonTabButton tab='home' href='/home'>
+              <IonIcon icon={homeOutline} />
+              <IonLabel>Home</IonLabel>
+            </IonTabButton>
+
+            <IonTabButton tab='search' href='/search'>
+              <IonIcon icon={search} />
+              <IonLabel>Search</IonLabel>
+            </IonTabButton>
+
+            <IonTabButton tab='favorites' href='/favorites'>
+              <IonIcon icon={heart} />
+              <IonLabel>Favorites</IonLabel>
+            </IonTabButton>
+
+            <IonTabButton tab='update' href='/updates'>
+              <IonIcon icon={notificationsOutline} />
+              <IonLabel>Updates</IonLabel>
+            </IonTabButton>
+          </IonTabBar>
+
+        </IonTabs>
+      </IonPage>
     </IonReactRouter>
   </IonApp>
 );
 
 export default App;
-   
