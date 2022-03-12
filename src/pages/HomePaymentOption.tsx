@@ -14,14 +14,14 @@ import Bank from '../assets/svgs/bank transfer.svg'
 // css
 import '../assets/css/verification.css';
 
-const HomePaymentOption = () => {
+const HomePaymentOption: React.FC = () => {
   return (
     <IonPage>
       <Header routerLink='/property-detail' />
 
 
       <IonContent className='ion-padding'>
-        <h1 className='text-muted text-center bold'>Payment</h1>
+        <h1 className='text-muted text-center bold'>Your Offer</h1>
         <PropertyPreview
           description='3 Bed Room Detached'
           price='N30,000,000 per SQM'

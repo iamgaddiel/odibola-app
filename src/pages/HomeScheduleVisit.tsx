@@ -8,6 +8,7 @@ import '../assets/css/reg.css';
 
 // image
 import Home1 from '../assets/images/home.png'
+import Header from '../components/Header';
 
 
 //components
@@ -18,14 +19,7 @@ const HomeScheduleVisit: React.FC = () => {
     
     return (
         <IonPage color='primary'>
-            <IonHeader color='default' className='ion-no-border py-3'>
-                <IonToolbar color='default'>
-                    <IonButtons>
-                        <IonBackButton defaultHref='/property-detail' />
-                    </IonButtons>
-                </IonToolbar>
-            </IonHeader>
-
+            <Header routerLink='/property-detail' />
 
             <IonContent>
 

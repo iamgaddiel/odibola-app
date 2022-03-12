@@ -1,18 +1,22 @@
-import { IonImg } from '@ionic/react'
-import React from 'react'
+import { IonFab, IonFabButton, IonIcon, IonImg } from '@ionic/react'
+import { heart } from 'ionicons/icons'
 
 
-interface LandPreviewProps{
+interface FavoritesProps {
     imageUrl: string,
     title: string,
     location: string,
     price: string
 }
 
-const LandPreview = ({imageUrl, title, location, price}: LandPreviewProps) => {
+const FavoriteCard = ({ imageUrl, title, location, price }: FavoritesProps) => {
     return (
         <section className='d-flex align-items-center py-4 border-bottom border-top'>
-
+            <IonFab vertical='top' horizontal='end'>
+                <IonFabButton color='default' size='small' translucent>
+                    <IonIcon icon={heart} color='danger'/>
+                </IonFabButton>
+            </IonFab>
             <div className="gallery-preview-sm mx-4">
                 <IonImg src={imageUrl} alt='' />
             </div>
@@ -27,4 +31,4 @@ const LandPreview = ({imageUrl, title, location, price}: LandPreviewProps) => {
     )
 }
 
-export default LandPreview
+export default FavoriteCard
