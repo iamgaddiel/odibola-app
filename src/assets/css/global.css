@@ -35,6 +35,16 @@
     --waning-bold: #FFBF29;
     --primary-notice: #EBEDFF;
 
+    /* dashboard colors */
+    --light-blue-bg: #F3F4FF;
+    --light-orange-bg: #FFEFC9;
+    --light-green-bg: #EEFFEF;
+    --light-lemon-bg: #EAEEDA;
+    --dark-green: #25902D;
+    --dark-lemon: #95A64B;
+    --dark-orange: #DFA00F;
+
+
     /* ionic theme */
     --ion-background-color: #F8F8F8;
     --ion-toolbar-background: #F8F8F8;
@@ -62,6 +72,16 @@
 .light-text{
     color: var(--white) !important;
 }
+.lemon-text{
+    color: var(--dark-lemon) !important;
+}
+.green-text{
+    color: var(--dark-green) !important;
+}
+.orange-text{
+    color: var(--dark-orange) !important;
+}
+
 
 
 /* background colors */
@@ -109,6 +129,18 @@
 }
 .success-notice-bg {
     background-color: var(--light-green) !important;
+}
+.light-blue-bg{
+    background-color: var(--light-blue-bg) !important;
+}
+.light-green-bg{
+    background-color: var(--light-green-bg) !important;
+}
+.light-lemon-bg{
+    background-color: var(--light-lemon-bg) !important;
+}
+.light-orange-bg{
+    background-color: var(--light-orange-bg) !important;
 }
 
 
