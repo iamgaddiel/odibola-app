@@ -38,7 +38,6 @@ import ScanNationalIDFront from './pages/ScanNationalIDFront';
 import ScanNationalIDBack from './pages/ScanNationalIDBack';
 import AccountVerified from './pages/AccountVerified';
 import ContractOfSale from './pages/ContractOfSale';
-import Routes from './components/Routes';
 import HomePaymentOption from './pages/HomePaymentOption';
 import HomePayWithBackTransfer from './pages/HomePayWithBackTransfer';
 import HomeProofOfPayment from './pages/HomeProofOfPayment';
@@ -60,7 +59,11 @@ import Favorite from './pages/Favorites';
 import Updates from './pages/Updates';
 
 // ionic icons
-import { homeOutline, search, heart, barbellOutline, notificationsOutline } from 'ionicons/icons';
+import { homeOutline, search, heart, notificationsOutline } from 'ionicons/icons';
+import Dashboard from './pages/Dashboard';
+import AccountHistory from './pages/AccountHistory';
+import AllAccountHistory from './pages/AllAccountHistory';
+import ManageDocuments from './pages/ManageDocuments';
 
 
 setupIonicReact();
@@ -78,6 +81,12 @@ const App: React.FC = () => (
           <IonRouterOutlet>
             <Route exact path="/onboarding" component={Onboarding} />
             <Route exact path='/search-result' component={SearchResult} />
+
+            {/* dashboard */}
+            <Route exact path='/dashboard' component={Dashboard} />
+            <Route exact path='/account-history' component={AccountHistory} />
+            <Route exact path='/all-account-history' component={AllAccountHistory} />
+            <Route exact path='/manage-documents' component={ManageDocuments} />
 
             {/* tabs */}
             <Redirect exact from='/' to='/home' />
